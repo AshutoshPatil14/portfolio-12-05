@@ -1,10 +1,26 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 function Cursor() {
   const curRef = useRef(null)
   const curRingRef = useRef(null)
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 900)
+    }
+
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+
+    return () => {
+      window.removeEventListener('resize', checkMobile)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (isMobile) return
+
     let mx = 0, my = 0, rx = 0, ry = 0
     const cur = curRef.current
     const ring = curRingRef.current
@@ -64,12 +80,16 @@ function Cursor() {
         el.removeEventListener('mouseleave', handleMouseLeave)
       })
     }
-  }, [])
+  }, [isMobile])
 
   return (
     <>
-      <div className="cur" ref={curRef}></div>
-      <div className="cur-ring" ref={curRingRef}></div>
+      {!isMobile && (
+        <>
+          <div className="cur" ref={curRef}></div>
+          <div className="cur-ring" ref={curRingRef}></div>
+        </>
+      )}
     </>
   )
 }

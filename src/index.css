@@ -1156,6 +1156,10 @@ footer {
 }
 
 @media (max-width: 900px) {
+  .cur,
+  .cur-ring {
+    display: none !important;
+  }
   nav {
     padding: 1.2rem 1.5rem;
   }
