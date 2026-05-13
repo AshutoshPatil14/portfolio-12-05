@@ -1,4 +1,5 @@
 function Hero() {
+  
   return (
     <section id="hero">
       <div className="hero-bg-text">AP</div>
@@ -8,7 +9,7 @@ function Hero() {
         </div>
         <h1 className="hero-name">Ashutosh<br />Patil</h1>
         <div className="hero-divider"></div>
-        <p className="hero-role">// Full-Stack Developer · MERN Stack · AI Enthusiast</p>
+        <p className="hero-role">// Full-Stack Developer · MERN Stack · Tech Enthusiast</p>
         <p className="hero-desc">
           Building scalable web applications with clean architecture, performance-first mindset, and
           a strong eye for UI/UX.
