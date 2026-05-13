@@ -33,14 +33,19 @@ function Navbar() {
         <span className={menuOpen ? 'open' : ''}></span>
         <span className={menuOpen ? 'open' : ''}></span>
       </button>
-      <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
-        <li><a href="#about" onClick={closeMenu}>About</a></li>
-        <li><a href="#skills" onClick={closeMenu}>Skills</a></li>
-        <li><a href="#experience" onClick={closeMenu}>Experience</a></li>
-        <li><a href="#projects" onClick={closeMenu}>Projects</a></li>
-        <li><a href="#education" onClick={closeMenu}>Education</a></li>
-        <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
-      </ul>
+      <div className={`nav-right ${menuOpen ? 'active' : ''}`}>
+        <ul className="nav-links">
+          <li><a href="#about" onClick={closeMenu}>About</a></li>
+          <li><a href="#skills" onClick={closeMenu}>Skills</a></li>
+          <li><a href="#experience" onClick={closeMenu}>Experience</a></li>
+          <li><a href="#projects" onClick={closeMenu}>Projects</a></li>
+          <li><a href="#education" onClick={closeMenu}>Education</a></li>
+          <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
+        </ul>
+        <a download href="/public/Ashutosh-FullStack-Resume.pdf" className="nav-resume-btn">
+          Download Resume
+        </a>
+      </div>
     </nav>
   )
 }

@@ -99,10 +99,17 @@ nav.scrolled {
 .nav-logo span {
   color: var(--accent2);
 }
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
 .nav-links {
   display: flex;
   gap: 2.5rem;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .nav-links a {
   font-family: "JetBrains Mono", monospace;
@@ -129,6 +136,34 @@ nav.scrolled {
 }
 .nav-links a:hover::after {
   width: 100%;
+}
+.nav-resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.5rem;
+  background: var(--accent);
+  color: #fff;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid var(--accent);
+  transition:
+    background 0.2s,
+    color 0.2s,
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+.nav-resume-btn:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 0 var(--accent2);
+}
+.nav-resume-btn::after {
+  display: none;
 }
 
 .hamburger {
@@ -1169,7 +1204,7 @@ footer {
   .hamburger {
     display: flex;
   }
-  .nav-links {
+  .nav-right {
     position: fixed;
     top: 0;
     right: -100%;
@@ -1184,8 +1219,16 @@ footer {
     padding: 0;
     border-left: 1px solid var(--border);
   }
-  .nav-links.active {
+  .nav-right.active {
     right: 0;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .nav-resume-btn {
+    width: 80%;
+    justify-content: center;
   }
   section {
     padding: 5rem 1.5rem;
