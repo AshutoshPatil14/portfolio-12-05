@@ -42,7 +42,7 @@ function Navbar() {
           <li><a href="#education" onClick={closeMenu}>Education</a></li>
           <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
         </ul>
-        <a download href="/public/Ashutosh-FullStack-Resume.pdf" className="nav-resume-btn">
+        <a href="/Ashutosh-FullStack-Resume.pdf" download className="nav-resume-btn">
           Download Resume
         </a>
       </div>
