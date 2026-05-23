@@ -10,7 +10,7 @@ function Interests({ addToRefs }) {
       <div className="ruled-line reveal d2" ref={addToRefs}><div className="ruled-dot"></div></div>
       <div className="interests-flex reveal d2" ref={addToRefs}>
         <div className="int-block">
-          <div className="int-icon">⚙️</div>
+          <div className="int-icon">💻</div>
           <div className="int-name">Technology Enthusiast</div>
         </div>
         <div className="int-block">
